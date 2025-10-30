@@ -1,0 +1,71 @@
+body {
+    font-family: 'Orbitron', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: radial-gradient(circle, #1a1a2e, #0b0b1a);
+    color: #e0e0ff;
+}
+
+.game-container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    text-shadow: 0 0 10px #00f7ff;
+}
+
+.stats {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+.tree-container {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    border: 2px solid #00f7ff;
+    background: rgba(0, 0, 50, 0.3);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 247, 255, 0.5);
+}
+
+.upgrade-node {
+    position: absolute;
+    padding: 10px;
+    background: linear-gradient(45deg, #00f7ff, #ff00ff);
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    width: 120px;
+    font-size: 14px;
+    box-shadow: 0 0 10px rgba(0, 247, 255, 0.7);
+    transition: transform 0.2s;
+}
+
+.upgrade-node.final {
+    width: 180px; /* 50% larger */
+    font-size: 21px; /* 50% larger */
+}
+
+.upgrade-node.locked {
+    background: linear-gradient(45deg, #555, #888);
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.upgrade-node:hover:not(.locked) {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 247, 255, 1);
+}
+
+.line {
+    position: absolute;
+    background: #00f7ff;
+    box-shadow: 0 0 5px #00f7ff;
+    transform-origin: 0 0;
+}
